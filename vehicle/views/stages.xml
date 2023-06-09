@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+
+<record id="stages_form_view" model="ir.ui.view">
+   <field name="name">Stages Form View</field>
+   <field name="model">maintenance.stage</field>
+   <field name="arch" type="xml">
+      <form>
+        <sheet>
+
+           <group>
+            <field name="name"></field>
+            <field name="sequence"></field>
+
+
+           </group>
+        </sheet>
+        <div class="oe_chatter">
+            <field name="message_follower_ids"></field>
+            <field name="message_ids" options="{'post_refresh' : 'recipients'}"></field>
+        </div>
+
+
+
+      </form>
+
+
+
+
+
+   </field>
+
+</record>
+
+
+
+<record id="stages_tree_view" model="ir.ui.view">
+   <field name="name">Stages Tree View</field>
+   <field name="model">maintenance.stage</field>
+   <field name="arch" type="xml">
+      <tree>
+         <field name="name"></field>
+         <field name="sequence"></field>
+
+      </tree>
+
+
+   </field>
+
+</record>
+
+
+
+
+
+<record id="mnu_action_stage" model="ir.actions.act_window">
+    <field name="name">Stages</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">maintenance.stage</field>
+    <field name="view_mode">tree,form</field>
+
+</record>
+
+
+
+
+
+    <menuitem id="menu_stage"
+        name="Stages"
+        action="mnu_action_stage"
+        parent="mnu_maintenance_parent"
+        sequence="10"
+    />
+
+
+
+
+</odoo>
+

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+<record id="customer_form_view" model="ir.ui.view">
+   <field name="name">Customer Form View</field>
+   <field name="model">customer.details</field>
+   <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+
+           <group>
+            <field name="name"></field>
+            <field name="customer_mobile"></field>
+            <field name ="customer_code"></field>
+            <field name="active" invisible="1"/>
+
+           </group>
+        </sheet>
+        <div class="oe_chatter">
+            <field name="message_follower_ids"></field>
+            <field name="message_ids" options="{'post_refresh' : 'recipients'}"></field>
+        </div>
+
+
+
+      </form>
+
+
+
+
+
+   </field>
+
+</record>
+
+<record id="customer_tree_view" model="ir.ui.view">
+   <field name="name">Customer Tree View</field>
+   <field name="model">customer.details</field>
+   <field name="arch" type="xml">
+      <tree>
+         <field name="name"></field>
+         <field name="customer_mobile"></field>
+         <field name ="customer_code"></field>
+
+      </tree>
+
+
+   </field>
+
+</record>
+
+
+  <record id="customer_search_view" model="ir.ui.view">
+   <field name="name">Customer Tree Search</field>
+   <field name="model">customer.details</field>
+   <field name="arch" type="xml">
+      <search>
+         <field name="name" filter_domain ="['|', ('customer_name','ilike',self))]"></field>
+         <field name="customer_mobile"></field>
+         <field name ="customer_code"></field>
+
+
+
+        </search>
+
+
+   </field>
+
+  </record>
+
+<record id="act_customer_details" model="ir.actions.act_window">
+   <field name="name">Customers</field>
+   <field name="type">ir.actions.act_window</field>
+   <field name="res_model">customer.details</field>
+   <field name="view_mode">tree,form</field>
+</record>
+
+<menuitem id="mnu_customer_details"
+          name="Customer Data"
+          parent="mnu_customer_records"
+          action="act_customer_details"
+          sequence="10">
+</menuitem>
+
+</odoo>

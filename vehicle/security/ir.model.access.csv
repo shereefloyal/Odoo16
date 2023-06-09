@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+vehicle_details,Vehicle,vehicle.model_maintenance_records,base.group_user,1,1,1,1
+Maintenance_details,Maintenance,vehicle.model_maintenance_services,base.group_user,1,1,1,1
+Maintenance_spares,Spares,vehicle.model_maintenance_spares,base.group_user,1,1,1,1
+vehicle_master,Vehicle Master,vehicle.model_vehicles_master,base.group_user,1,1,1,1
+maintenance_stages,Maintenance Stage,vehicle.model_maintenance_stage,base.group_user,1,1,1,1

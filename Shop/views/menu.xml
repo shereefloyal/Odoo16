@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem id="mnu_shop_details"
+              name="Goods Details"
+              sequence="10"
+    />
+
+    <menuitem id="mnu_customer_records"
+              name="Customer Details"
+              sequence="10"
+    />
+</odoo>

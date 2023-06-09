@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+<record id="goods_form_view" model="ir.ui.view">
+   <field name="name">Goods Form View</field>
+   <field name="model">goods.records</field>
+   <field name="arch" type="xml">
+      <form>
+        <sheet>
+            <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+
+
+           <div class="oe_title">
+               <h1>
+                   <field name="ref" readonly="1"/>
+               </h1>
+           </div>
+           <group>
+         <field name="customer_id"></field>
+         <field name="goods_name"></field>
+         <field name="goods_price"></field>
+         <field name="goods_category"></field>
+         <field name="goods_rated" ></field>
+         <field name="goods_capital"></field>
+         <field name="goods_cost"></field>
+         <field name="active" invisible="1"/>
+
+           </group>
+        </sheet>
+        <div class="oe_chatter">
+            <field name="message_follower_ids"></field>
+            <field name="message_ids" options="{'post_refresh' : 'recipients'}"></field>
+        </div>
+
+
+
+      </form>
+
+
+
+
+
+   </field>
+
+</record>
+
+<record id="goods_tree_view" model="ir.ui.view">
+   <field name="name">Goods Tree View</field>
+   <field name="model">goods.records</field>
+   <field name="arch" type="xml">
+      <tree>
+         <field name="goods_name"></field>
+         <field name="goods_price"></field>
+         <field name="goods_category"></field>
+      </tree>
+
+
+   </field>
+
+</record>
+
+<record id="goods_inherit_view" model="ir.ui.view">
+   <field name="name">Goods Inherit View</field>
+   <field name="model">res.partner</field>
+   <field name="inherit_id" ref="base.view_partner_form"/>
+   <field name="arch" type="xml">
+
+         <field name="email" position ="attribute">
+             <attribute name="readonly" >1</attribute>
+         </field>
+
+
+   </field>
+
+</record>
+
+
+
+
+
+
+  <record id="goods_search_view" model="ir.ui.view">
+   <field name="name">Goods Tree Search</field>
+   <field name="model">goods.records</field>
+   <field name="arch" type="xml">
+      <search>
+         <field name="goods_name" filter_domain ="['|', ('goods_name','ilike',self),('goods_category','ilike',self)]"></field>
+         <field name="goods_price"></field>
+         <field name="goods_category"></field>
+
+         <filter name="filter_category_ele" string="Show Electronics Only" domain="[('goods_category','=','ele')]"/>
+        <separator/>
+         <filter name="filter_category_gro" string="Show Grocery Only" domain="[('goods_category','=','gro')]"/>
+        <group expand="0" string="Group By Category">
+            <filter string="Category" name="group_by_category" context ="{'group_by':'goods_category'}"/>
+        <separator/>
+            <filter name="Archived" string="Archived" domain="[('active', '=', 'False')]"/>
+        </group>
+      </search>
+
+
+   </field>
+
+  </record>
+
+<record id="act_goods_details" model="ir.actions.act_window">
+   <field name="name">Goods</field>
+   <field name="type">ir.actions.act_window</field>
+   <field name="res_model">goods.records</field>
+   <field name="view_mode">tree,form</field>
+</record>
+
+<menuitem id="mnu_goods_records"
+          name="Goods Data"
+          parent="mnu_shop_details"
+          action="act_goods_details"
+          sequence="10">
+</menuitem>
+
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="sequence_record" model="ir.sequence">
+            <field name="name">Maintenance Sequence</field>
+            <field name="code">maintenance.records</field>
+            <field name="prefix">VM</field>
+            <field name="padding">6</field>
+        </record>
+    </data>
+
+    <data>
+        <record id="vehicle_sequence" model="ir.sequence">
+            <field name="name">Vehicle Sequence</field>
+            <field name="code">vehicles.master</field>
+            <field name="prefix">V</field>
+            <field name="padding">3</field>
+        </record>
+    </data>
+</odoo>

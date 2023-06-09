@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem id="menu_library" name="Library" sequence="10"/>
+
+    <record id="action_books_details" model="ir.actions.act_window">
+        <field name="name">Books Details</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">library.books</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_books_details"
+              name="Book Records"
+              parent="menu_library"
+              action="action_books_details"
+              sequence="10"/>
+
+</odoo>

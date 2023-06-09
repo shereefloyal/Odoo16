@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+
+<record id="maintenance_form_view" model="ir.ui.view">
+   <field name="name">Maintenance Form View</field>
+   <field name="model">maintenance.records</field>
+   <field name="arch" type="xml">
+      <form>
+
+        <sheet>
+                <div class="oe_title">
+                    <h1>
+                        <!-- Add a placeholder div to create a space on the left side -->
+                        <div style="float: left; width: 50%;"></div>
+                        <div style="float: right; text-align: right;">
+                            <label for="net_total" string="Net Total is:"  style="font-size: 40px;" />
+                            <field name="net_total" string="Total Amount" widget="monetary"/>
+                        </div>
+                    </h1>
+                </div>
+
+                <div class="oe_title">
+                   <h1>
+                       <field name="ref" readonly="1"/>
+                   </h1>
+                </div>
+
+
+           <group>
+
+            <field name="employee_name"></field>
+            <field name="customer_id"></field>
+            <field name="vehicle_id"></field>
+
+            <field name="active" invisible="1"/>
+           </group>
+               <group>
+                  <field name="stage_id"/>
+               </group>
+
+             <notebook>
+                <page string="Maintenance Service Details">
+                    <field name="services_ids" mode="tree,kanban" nolabel="1">
+                        <tree editable="top">
+                            <field name="service_date"/>
+                            <field name="service_id"/>
+                            <field name="quantity"/>
+                            <field name="price"/>
+                            <field name="discount"/>
+                            <field name="total" readonly="1"/>
+
+                            <!-- Add a footer with the 'total_amount' field -->
+
+
+                        </tree>
+
+
+                    </field>
+
+                </page>
+
+                <page string="Spare Parts Details">
+                    <field name="spare_ids" mode="tree,kanban" nolabel="1">
+                        <tree editable="top">
+                            <field name="spare_date"/>
+                            <field name="spare_id"/>
+                            <field name="spare_quantity"/>
+                            <field name="spare_price"/>
+                            <field name="spare_discount"/>
+                            <field name="spare_total" readonly="1"/>
+
+                            <!-- Add a footer with the 'total_amount' field -->
+
+
+                        </tree>
+
+
+                    </field>
+
+                </page>
+                <page string="Comments">
+                    <field name="maintenance_information" placeholder="Enter your notes regarding the maintenance works"/>
+
+                </page>
+            </notebook>
+
+
+            <separator/>
+
+
+        </sheet>
+        <div class="oe_chatter">
+            <field name="message_follower_ids"></field>
+            <field name="message_ids" options="{'post_refresh' : 'recipients'}"></field>
+        </div>
+
+
+
+      </form>
+
+
+
+
+
+   </field>
+
+
+
+</record>
+
+
+
+
+
+<record id="maintenance_tree_view" model="ir.ui.view">
+   <field name="name">Maintenance Tree View</field>
+   <field name="model">maintenance.records</field>
+   <field name="arch" type="xml">
+      <tree multi_edit="1">
+         <field name="ref"></field>
+         <field name="customer_id"></field>
+         <field name="vehicle_id"></field>
+         <field name="stage_id" widget="badge" ></field>
+
+      </tree>
+   </field>
+
+</record>
+
+
+
+
+  <record id="maintenance_search_view" model="ir.ui.view">
+   <field name="name">Maintenance Tree Search</field>
+   <field name="model">maintenance.records</field>
+   <field name="arch" type="xml">
+      <search>
+         <field name="customer_id" filter_domain ="['|', ('customer_id','ilike',self),('ref','ilike',self)]"></field>
+         <field name="customer_id"></field>
+         <field name="ref"></field>
+
+
+
+        <separator/>
+            <filter name="Archived" string="Archived" domain="[('active', '=', 'False')]"/>
+
+      </search>
+
+
+   </field>
+
+  </record>
+
+
+
+
+
+<record id="mnu_action_maintenance" model="ir.actions.act_window">
+    <field name="name">Maintenance</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">maintenance.records</field>
+    <field name="view_mode">tree,form</field>
+
+</record>
+
+
+
+
+
+    <menuitem id="menu_maint"
+        name="Maintenance"
+        action="mnu_action_maintenance"
+        parent="mnu_maintenance_parent"
+        sequence="10"
+    />
+
+
+<record id="mnu_action_stage" model="ir.actions.act_window">
+    <field name="name">Stages</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">maintenance.stage</field>
+    <field name="view_mode">tree,form</field>
+
+</record>
+    <menuitem id="menu_stage"
+        name="Stages"
+        action="mnu_action_stage"
+        parent="mnu_maintenance_parent"
+        sequence="10"
+    />
+
+
+
+
+
+</odoo>
+

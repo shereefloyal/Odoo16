@@ -1,0 +1,81 @@
+2023-06-06 13:15:05,106 559418 INFO ? odoo: Odoo version 16.0 
+2023-06-06 13:15:05,106 559418 INFO ? odoo: Using configuration file at /home/shereef/odoo/debian/odoo.conf 
+2023-06-06 13:15:05,107 559418 INFO ? odoo: addons paths: ['/home/shereef/odoo/odoo/addons', '/home/shereef/.local/share/Odoo/addons/16.0', '/home/shereef/odoo/addons', '/home/shereef/odoo/odoo/MyCustom'] 
+2023-06-06 13:15:05,107 559418 INFO ? odoo: database: shereef@default:default 
+2023-06-06 13:15:05,728 559418 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/bin/wkhtmltopdf 
+2023-06-06 13:15:07,687 559418 INFO ? odoo.service.server: HTTP service (werkzeug) running on shereef-Inspiron-3584:8069 
+2023-06-06 13:15:11,451 559418 INFO MyFirstOdoo odoo.modules.loading: loading 1 modules... 
+2023-06-06 13:15:11,473 559418 INFO MyFirstOdoo odoo.modules.loading: 1 modules loaded in 0.02s, 0 queries (+0 extra) 
+2023-06-06 13:15:11,540 559418 WARNING MyFirstOdoo odoo.modules.module: Missing `license` key in manifest for 'Library', defaulting to LGPL-3 
+2023-06-06 13:15:11,580 559418 WARNING MyFirstOdoo odoo.modules.graph: module auto: not installable, skipped 
+2023-06-06 13:15:11,612 559418 WARNING MyFirstOdoo odoo.modules.module: Missing `license` key in manifest for 'Hospital', defaulting to LGPL-3 
+2023-06-06 13:15:11,907 559418 WARNING MyFirstOdoo odoo.modules.module: Missing `license` key in manifest for 'School', defaulting to LGPL-3 
+2023-06-06 13:15:12,598 559418 WARNING MyFirstOdoo odoo.modules.module: Missing `license` key in manifest for 'vehicle', defaulting to LGPL-3 
+2023-06-06 13:15:12,961 559418 WARNING MyFirstOdoo odoo.modules.module: Missing `license` key in manifest for 'Shop', defaulting to LGPL-3 
+2023-06-06 13:15:12,964 559418 INFO MyFirstOdoo odoo.modules.loading: loading 66 modules... 
+2023-06-06 13:15:15,503 559418 INFO MyFirstOdoo odoo.modules.loading: 66 modules loaded in 2.54s, 0 queries (+0 extra) 
+2023-06-06 13:15:15,639 559418 WARNING MyFirstOdoo odoo.fields: Field maintenance.records.vehicle_id: unknown parameter 'widget', if this is an actual parameter you may want to override the method _valid_field_parameter on the relevant model in order to allow it 
+2023-06-06 13:15:15,640 559418 WARNING MyFirstOdoo odoo.fields: Field vehicles.master.model_year: unknown parameter 'Required', if this is an actual parameter you may want to override the method _valid_field_parameter on the relevant model in order to allow it 
+2023-06-06 13:15:15,841 559418 ERROR MyFirstOdoo odoo.modules.loading: Some modules are not loaded, some dependencies or manifest may be missing: ['auto'] 
+2023-06-06 13:15:15,843 559418 INFO MyFirstOdoo odoo.modules.loading: Modules loaded. 
+2023-06-06 13:15:15,850 559418 INFO MyFirstOdoo odoo.modules.registry: Registry loaded in 4.474s 
+2023-06-06 13:15:15,852 559418 INFO MyFirstOdoo odoo.addons.base.models.ir_http: Generating routing map for key None 
+2023-06-06 13:15:16,177 559418 INFO MyFirstOdoo werkzeug: 127.0.0.1 - - [06/Jun/2023 13:15:16] "GET /websocket HTTP/1.1" 101 - 23 0.341 4.461
+2023-06-06 13:15:16,185 559418 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2023-06-06 13:15:27,620 559418 INFO ? odoo.service.server: Initiating shutdown 
+2023-06-06 13:15:27,620 559418 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2023-06-06 13:15:27,962 559418 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 4 connections  
+2023-06-06 13:15:29,094 559476 INFO ? odoo: Odoo version 16.0 
+2023-06-06 13:15:29,095 559476 INFO ? odoo: Using configuration file at /home/shereef/odoo/debian/odoo.conf 
+2023-06-06 13:15:29,095 559476 INFO ? odoo: addons paths: ['/home/shereef/odoo/odoo/addons', '/home/shereef/.local/share/Odoo/addons/16.0', '/home/shereef/odoo/addons', '/home/shereef/odoo/odoo/MyCustom'] 
+2023-06-06 13:15:29,095 559476 INFO ? odoo: database: shereef@default:default 
+2023-06-06 13:15:29,267 559476 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/bin/wkhtmltopdf 
+2023-06-06 13:15:29,521 559476 INFO ? odoo.service.server: HTTP service (werkzeug) running on shereef-Inspiron-3584:8069 
+2023-06-06 13:15:30,099 559476 INFO MyFirstOdoo odoo.modules.loading: loading 1 modules... 
+2023-06-06 13:15:30,113 559476 INFO MyFirstOdoo odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2023-06-06 13:15:30,115 559476 WARNING MyFirstOdoo odoo.modules.module: Missing `license` key in manifest for 'Library', defaulting to LGPL-3 
+2023-06-06 13:15:30,116 559476 WARNING MyFirstOdoo odoo.modules.graph: module auto: not installable, skipped 
+2023-06-06 13:15:30,116 559476 WARNING MyFirstOdoo odoo.modules.module: Missing `license` key in manifest for 'Hospital', defaulting to LGPL-3 
+2023-06-06 13:15:30,123 559476 WARNING MyFirstOdoo odoo.modules.module: Missing `license` key in manifest for 'School', defaulting to LGPL-3 
+2023-06-06 13:15:30,136 559476 WARNING MyFirstOdoo odoo.modules.module: Missing `license` key in manifest for 'vehicle', defaulting to LGPL-3 
+2023-06-06 13:15:30,146 559476 WARNING MyFirstOdoo odoo.modules.module: Missing `license` key in manifest for 'Shop', defaulting to LGPL-3 
+2023-06-06 13:15:30,148 559476 INFO MyFirstOdoo odoo.modules.loading: loading 66 modules... 
+2023-06-06 13:15:30,758 559476 INFO MyFirstOdoo odoo.modules.loading: 66 modules loaded in 0.61s, 0 queries (+0 extra) 
+2023-06-06 13:15:30,876 559476 WARNING MyFirstOdoo odoo.fields: Field maintenance.records.vehicle_id: unknown parameter 'widget', if this is an actual parameter you may want to override the method _valid_field_parameter on the relevant model in order to allow it 
+2023-06-06 13:15:30,876 559476 WARNING MyFirstOdoo odoo.fields: Field vehicles.master.model_year: unknown parameter 'Required', if this is an actual parameter you may want to override the method _valid_field_parameter on the relevant model in order to allow it 
+2023-06-06 13:15:30,927 559476 ERROR MyFirstOdoo odoo.modules.loading: Some modules are not loaded, some dependencies or manifest may be missing: ['auto'] 
+2023-06-06 13:15:30,929 559476 INFO MyFirstOdoo odoo.modules.loading: Modules loaded. 
+2023-06-06 13:15:30,938 559476 INFO MyFirstOdoo odoo.modules.registry: Registry loaded in 0.858s 
+2023-06-06 13:15:30,940 559476 INFO MyFirstOdoo odoo.addons.base.models.ir_http: Generating routing map for key None 
+2023-06-06 13:15:31,186 559476 INFO MyFirstOdoo werkzeug: 127.0.0.1 - - [06/Jun/2023 13:15:31] "GET /websocket HTTP/1.1" 101 - 23 0.023 1.084
+2023-06-06 13:15:31,195 559476 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2023-06-06 13:15:41,311 559476 INFO ? odoo.service.server: Initiating shutdown 
+2023-06-06 13:15:41,312 559476 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2023-06-06 13:15:41,667 559476 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 4 connections  
+2023-06-06 13:15:45,243 559532 INFO ? odoo: Odoo version 16.0 
+2023-06-06 13:15:45,243 559532 INFO ? odoo: Using configuration file at /home/shereef/odoo/debian/odoo.conf 
+2023-06-06 13:15:45,243 559532 INFO ? odoo: addons paths: ['/home/shereef/odoo/odoo/addons', '/home/shereef/.local/share/Odoo/addons/16.0', '/home/shereef/odoo/addons', '/home/shereef/odoo/odoo/MyCustom'] 
+2023-06-06 13:15:45,243 559532 INFO ? odoo: database: shereef@default:default 
+2023-06-06 13:15:45,378 559532 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/bin/wkhtmltopdf 
+2023-06-06 13:15:45,632 559532 INFO ? odoo.service.server: HTTP service (werkzeug) running on shereef-Inspiron-3584:8069 
+2023-06-06 13:15:47,799 559532 INFO MyFirstOdoo odoo.modules.loading: loading 1 modules... 
+2023-06-06 13:15:47,812 559532 INFO MyFirstOdoo odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2023-06-06 13:15:47,813 559532 WARNING MyFirstOdoo odoo.modules.module: Missing `license` key in manifest for 'Library', defaulting to LGPL-3 
+2023-06-06 13:15:47,814 559532 WARNING MyFirstOdoo odoo.modules.graph: module auto: not installable, skipped 
+2023-06-06 13:15:47,814 559532 WARNING MyFirstOdoo odoo.modules.module: Missing `license` key in manifest for 'Hospital', defaulting to LGPL-3 
+2023-06-06 13:15:47,819 559532 WARNING MyFirstOdoo odoo.modules.module: Missing `license` key in manifest for 'School', defaulting to LGPL-3 
+2023-06-06 13:15:47,833 559532 WARNING MyFirstOdoo odoo.modules.module: Missing `license` key in manifest for 'vehicle', defaulting to LGPL-3 
+2023-06-06 13:15:47,842 559532 WARNING MyFirstOdoo odoo.modules.module: Missing `license` key in manifest for 'Shop', defaulting to LGPL-3 
+2023-06-06 13:15:47,844 559532 INFO MyFirstOdoo odoo.modules.loading: loading 66 modules... 
+2023-06-06 13:15:48,435 559532 INFO MyFirstOdoo odoo.modules.loading: 66 modules loaded in 0.59s, 0 queries (+0 extra) 
+2023-06-06 13:15:48,556 559532 WARNING MyFirstOdoo odoo.fields: Field maintenance.records.vehicle_id: unknown parameter 'widget', if this is an actual parameter you may want to override the method _valid_field_parameter on the relevant model in order to allow it 
+2023-06-06 13:15:48,557 559532 WARNING MyFirstOdoo odoo.fields: Field vehicles.master.model_year: unknown parameter 'Required', if this is an actual parameter you may want to override the method _valid_field_parameter on the relevant model in order to allow it 
+2023-06-06 13:15:48,607 559532 ERROR MyFirstOdoo odoo.modules.loading: Some modules are not loaded, some dependencies or manifest may be missing: ['auto'] 
+2023-06-06 13:15:48,608 559532 INFO MyFirstOdoo odoo.modules.loading: Modules loaded. 
+2023-06-06 13:15:48,613 559532 INFO MyFirstOdoo odoo.modules.registry: Registry loaded in 0.836s 
+2023-06-06 13:15:48,614 559532 INFO MyFirstOdoo odoo.addons.base.models.ir_http: Generating routing map for key None 
+2023-06-06 13:15:48,850 559532 INFO MyFirstOdoo werkzeug: 127.0.0.1 - - [06/Jun/2023 13:15:48] "GET /websocket HTTP/1.1" 101 - 23 0.023 1.052
+2023-06-06 13:15:48,859 559532 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2023-06-06 13:16:02,636 559532 INFO ? odoo.service.server: Initiating shutdown 
+2023-06-06 13:16:02,636 559532 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2023-06-06 13:16:02,851 559532 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 4 connections  

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <menuitem id="mnu_school"
+        name="Students"
+        sequence="10"
+    />
+
+</odoo>

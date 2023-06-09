@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="FocProductManagementScreen" owl="1">
+        <div class="partnerlist-screen screen">
+            <div class="screen-content">
+                <div class="top-content">
+                    <div class="button back" t-on-click="back">
+                        <i t-if="env.isMobile" class="fa fa-angle-double-left"/>
+                        <t t-if="!env.isMobile"> Back</t>
+                    </div>
+                    <div class="top-right-buttons">
+                        <div class="search-bar-container sb-partner">
+                            <div class="pos-search-bar">
+                                <i class="fa fa-search" t-on-click="_onPressEnterKey"/>
+                                <input t-ref="search-word-input-foc-product" placeholder="Search Products..." size="1" t-on-keyup="updateProductList" />
+                                <i class="fa fa-times" t-on-click="_clearSearch"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="full-content">
+                <div class="product-list-container">
+                    <div class="product-list">
+                        <div style="width: 80% !important;" class='product' t-foreach="products || []"
+                                    t-as="item"
+                             t-key ="item.id" t-att-data-product-id="item.id" t-on-click="click_on_foc_product">
+                            <div class="product-img" style="width: 100%;height: 100%;">
+                                <img t-att-src='item.foc_image_url' alt="Product image"/>
+                                <span class="price-tag">
+                                    <t t-esc="env.pos.format_currency(item.lst_price,'Product Price')"/>
+                                </span>
+                                <div class="product-name">
+                                    <t t-esc="item.display_name"/>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+    </t>
+
+</templates>
+  	
+  	

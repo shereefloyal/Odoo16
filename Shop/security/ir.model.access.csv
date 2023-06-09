@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+goods_access,goods,Shop.model_goods_records,base.group_user,1,1,1,1
+customer_access,Customers,Shop.model_customer_details,base.group_user,1,1,1,1
