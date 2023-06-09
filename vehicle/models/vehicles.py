@@ -12,7 +12,6 @@ class vehicles_master(models.Model):
     model_name=fields.Char("Model Name",required=True)
     transmission_type=fields.Selection([('man','Manual'),('aut','Automatic'),('tip','Tiptronic')],string="Transimission")
 
-
     ref = fields.Char(string="Sequence", default=lambda self: _('New'))
     active = fields.Boolean(default=True)
     @api.model_create_multi
